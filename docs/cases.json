@@ -1,0 +1,469 @@
+[
+  {
+    "name": "Empty threat",
+    "input": {
+      "nodes": [
+        {
+          "player": 0,
+          "children": [
+            1,
+            2
+          ]
+        },
+        {
+          "payoff": [
+            "1",
+            "4"
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            3,
+            4
+          ]
+        },
+        {
+          "payoff": [
+            "-1",
+            "0"
+          ]
+        },
+        {
+          "payoff": [
+            "3",
+            "2"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Joint deviation escapes one-node trap",
+    "input": {
+      "nodes": [
+        {
+          "player": 0,
+          "children": [
+            1,
+            2
+          ]
+        },
+        {
+          "payoff": [
+            "1",
+            "0"
+          ]
+        },
+        {
+          "player": 0,
+          "children": [
+            3,
+            4
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "payoff": [
+            "3",
+            "0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Chance-zero still has a subgame",
+    "input": {
+      "nodes": [
+        {
+          "chance": [
+            "1",
+            "0"
+          ],
+          "children": [
+            1,
+            2
+          ]
+        },
+        {
+          "payoff": [
+            "2",
+            "2"
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            3,
+            4
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "5"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Tie changes earlier incentives",
+    "input": {
+      "nodes": [
+        {
+          "player": 0,
+          "children": [
+            1,
+            2
+          ]
+        },
+        {
+          "payoff": [
+            "2",
+            "0"
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            3,
+            4
+          ]
+        },
+        {
+          "payoff": [
+            "1",
+            "3"
+          ]
+        },
+        {
+          "payoff": [
+            "4",
+            "3"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "All ties",
+    "input": {
+      "nodes": [
+        {
+          "player": 0,
+          "children": [
+            1,
+            4
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            2,
+            3
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            5,
+            6
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Rational chance",
+    "input": {
+      "nodes": [
+        {
+          "chance": [
+            "1/3",
+            "2/3"
+          ],
+          "children": [
+            1,
+            4
+          ]
+        },
+        {
+          "player": 0,
+          "children": [
+            2,
+            3
+          ]
+        },
+        {
+          "payoff": [
+            "-1/2",
+            "3/4"
+          ]
+        },
+        {
+          "payoff": [
+            "1/2",
+            "-3/4"
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            5,
+            6
+          ]
+        },
+        {
+          "payoff": [
+            "2",
+            "-1"
+          ]
+        },
+        {
+          "payoff": [
+            "-2",
+            "1"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Terminal only",
+    "input": {
+      "nodes": [
+        {
+          "payoff": [
+            "-2",
+            "3"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "One player only",
+    "input": {
+      "nodes": [
+        {
+          "player": 1,
+          "children": [
+            1,
+            2
+          ]
+        },
+        {
+          "payoff": [
+            "2",
+            "2"
+          ]
+        },
+        {
+          "payoff": [
+            "1",
+            "3"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Boundary six decisions",
+    "input": {
+      "nodes": [
+        {
+          "player": 0,
+          "children": [
+            1,
+            8
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            2,
+            5
+          ]
+        },
+        {
+          "player": 0,
+          "children": [
+            3,
+            4
+          ]
+        },
+        {
+          "payoff": [
+            "1",
+            "2"
+          ]
+        },
+        {
+          "payoff": [
+            "3",
+            "0"
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            6,
+            7
+          ]
+        },
+        {
+          "payoff": [
+            "4",
+            "-1"
+          ]
+        },
+        {
+          "payoff": [
+            "-2",
+            "4"
+          ]
+        },
+        {
+          "player": 0,
+          "children": [
+            9,
+            12
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            10,
+            11
+          ]
+        },
+        {
+          "payoff": [
+            "5",
+            "5"
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "6"
+          ]
+        },
+        {
+          "payoff": [
+            "2",
+            "3"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "name": "Zero and unit chances",
+    "input": {
+      "nodes": [
+        {
+          "chance": [
+            "0",
+            "1"
+          ],
+          "children": [
+            1,
+            4
+          ]
+        },
+        {
+          "player": 0,
+          "children": [
+            2,
+            3
+          ]
+        },
+        {
+          "payoff": [
+            "5",
+            "1"
+          ]
+        },
+        {
+          "payoff": [
+            "1",
+            "5"
+          ]
+        },
+        {
+          "chance": [
+            "1",
+            "0"
+          ],
+          "children": [
+            5,
+            8
+          ]
+        },
+        {
+          "player": 1,
+          "children": [
+            6,
+            7
+          ]
+        },
+        {
+          "payoff": [
+            "3",
+            "2"
+          ]
+        },
+        {
+          "payoff": [
+            "2",
+            "3"
+          ]
+        },
+        {
+          "payoff": [
+            "0",
+            "0"
+          ]
+        }
+      ]
+    }
+  }
+]
