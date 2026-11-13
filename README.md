@@ -1,10 +1,19 @@
-# SubgameLab: a threat is not a credible plan
+# SubgameLab
 
-An exact finite sequential multiagent workbench. Compare root one-node stability, full-player pure Nash equilibrium, and subgame perfection without dropping off-path choices or backward-induction ties.
+SubgameLab checks small, supplied two-player sequential games with exact rational arithmetic. Compare root one-node stability, full-player pure Nash equilibrium and subgame perfection while retaining off-path choices and backward-induction ties.
 
-## Three distinctions you can inspect
+## Choose a stability question
 
-The default developed control has P1 choose action 0 for payoff (1, 4), or action 1 to a P2 decision. P2's action 0 gives (-1, 0); action 1 gives (3, 2). Complete plans 00 and 11 are root Nash. Plan 00 contains an empty threat: P2 would gain 2 by changing its action in the unreached continuation, although its root gain is 0. Only 11 is subgame perfect.
+- **Root one-node stability:** can a player improve the root payoff by changing a single decision?
+- **Root Nash:** can a player improve it by changing any combination of its decisions?
+- **Subgame perfection:** does a profitable full-player change exist in any continuation, including one with zero root reach probability?
+
+A negative answer to the first question does not settle the second. Root Nash
+alone does not rule out a profitable change in an unreached continuation.
+
+## Finite-game controls
+
+The default control has P1 choose action 0 for payoff (1, 4), or action 1 to a P2 decision. P2's action 0 gives (-1, 0); action 1 gives (3, 2). Complete plans 00 and 11 are root Nash. Plan 00 contains an empty threat: P2 would gain 2 by changing its action in the unreached continuation, although its root gain is 0. Only 11 is subgame perfect.
 
 A same-player control gives P1 root payoff 1 by stopping, 0 by entering then stopping, and 3 by entering then continuing. Plan 00 has no profitable one-node root change but gains 2 from changing both nodes. Root one-node stability is not Nash.
 
@@ -36,7 +45,7 @@ subgamelab verify certificate.json
 
 Native generation uses dynamic value evaluation and child-plan Cartesian products for backward induction. A separate checker imports validation only: it enumerates terminal paths and every unilateral subgame alternative, then reconstructs every certificate field. Browser BigInt generation is cross-checked against complete native reports; browser replay is same-engine and is not called independent verification.
 
-## Observed local evidence
+## Verification
 
 - 14 Python tests, including all 2,916 two-decision player/payoff assignments: 4 owner patterns times 729 ternary six-payoff assignments.
 - 65 complete cross-language reports: 10 developed controls and 55 seeded trees, 1,233 complete profiles, 12,820 subgame/player audits, and 48,250 full-player alternatives.
